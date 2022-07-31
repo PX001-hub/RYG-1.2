@@ -39,10 +39,11 @@ class ViewController: UIViewController {
 
     
     @IBAction func tapColorsButton(_ sender: UIButton) {
-        
+        if colorViewGreen.alpha < 1 {
+            colorViewGreen.alpha += 0.2
         
     }
     
     
 }
-
+}
