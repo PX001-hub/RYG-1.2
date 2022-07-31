@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RYG_1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URF-Ss-WTC">
+                                <rect key="frame" x="107" y="702" width="200" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="URF-Ss-WTC" secondAttribute="height" multiplier="100:29" id="78L-pM-Wea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapColorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBD-dV-HYi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gdw-gU-G4B">
+                                <rect key="frame" x="143" y="93" width="128" height="464"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1X-Tr-f5G">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="0g6-FN-42b"/>
+                                            <constraint firstAttribute="height" constant="128" id="XyW-a6-rFR"/>
+                                            <constraint firstAttribute="width" secondItem="G1X-Tr-f5G" secondAttribute="height" multiplier="1:1" id="ra0-WV-tDy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0C-7Y-iwB">
+                                        <rect key="frame" x="0.0" y="168" width="128" height="128"/>
+                                        <color key="backgroundColor" red="0.34901960784313724" green="0.023529411764705882" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.10196078431372549" green="0.30196078431372547" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="A9f-VE-uBX"/>
+                                            <constraint firstAttribute="width" secondItem="I0C-7Y-iwB" secondAttribute="height" multiplier="1:1" id="f0a-jt-K0X"/>
+                                            <constraint firstAttribute="width" constant="128" id="sTm-8g-DI0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWu-fB-Gcj">
+                                        <rect key="frame" x="0.0" y="336" width="128" height="128"/>
+                                        <color key="backgroundColor" red="1" green="0.62352941176470589" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.62352941176470589" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZWu-fB-Gcj" secondAttribute="height" multiplier="1:1" id="KGM-d4-pDZ"/>
+                                            <constraint firstAttribute="height" constant="128" id="OHa-r9-Nl6"/>
+                                            <constraint firstAttribute="width" constant="128" id="kwQ-Q8-7Ul"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZWu-fB-Gcj" firstAttribute="top" secondItem="I0C-7Y-iwB" secondAttribute="bottom" constant="40" id="CsJ-d3-xOh"/>
+                                    <constraint firstItem="I0C-7Y-iwB" firstAttribute="top" secondItem="G1X-Tr-f5G" secondAttribute="bottom" constant="40" id="bvV-GE-cLF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="URF-Ss-WTC" firstAttribute="top" secondItem="ZWu-fB-Gcj" secondAttribute="bottom" constant="145" id="CiD-S3-KP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="URF-Ss-WTC" secondAttribute="bottom" constant="102" id="OUQ-1s-qu2"/>
+                            <constraint firstItem="URF-Ss-WTC" firstAttribute="centerX" secondItem="gdw-gU-G4B" secondAttribute="centerX" id="WbL-so-Kyf"/>
+                            <constraint firstItem="gdw-gU-G4B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o6V-JW-NDy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorButton" destination="URF-Ss-WTC" id="mw9-Ce-7JY"/>
+                        <outlet property="colorViewGreen" destination="G1X-Tr-f5G" id="Q2N-jU-LHN"/>
+                        <outlet property="colorViewOrange" destination="ZWu-fB-Gcj" id="UuX-Hv-xtD"/>
+                        <outlet property="colorViewPurple" destination="I0C-7Y-iwB" id="sOD-lX-azn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
